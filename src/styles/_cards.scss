@@ -1,0 +1,34 @@
+.feature-card, .product-card {
+  @include neumorphic-shadow;
+  border-radius: $border-radius-lg;
+  padding: $spacing-md;
+  background: $surface-color;
+  transition: all 0.3s ease;
+  
+  @media (max-width: $breakpoint-sm) {
+    margin-bottom: $spacing-md;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-lg;
+  padding: $spacing-lg 0;
+  
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.products-grid {
+  @extend .features-grid;
+}
