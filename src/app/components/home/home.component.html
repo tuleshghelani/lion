@@ -9,7 +9,7 @@
              [attr.aria-hidden]="i !== currentSlide">
             <div class="slide-content" [style.backgroundImage]="'url(' + slide.image + ')'">
                 <div class="content-wrapper">
-                    <div class="text-content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-content" data-aos="fade-up" data-aos-delay="800">
                         <h1 class="slide-title" [attr.aria-label]="slide.title">{{slide.title}}</h1>
                         <p class="slide-description">{{slide.description}}</p>
                         <a *ngIf="slide.ctaText"
@@ -68,9 +68,9 @@
     <div class="features-grid" data-aos-duration="1000">
       <div class="feature-card"
            data-aos="fade-up"
-           data-aos-duration="800"
-           data-aos-delay="200">
-        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+           data-aos-duration="500"
+           data-aos-anchor-placement="center-bottom">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="200" data-aos-delay="500">
           <img src="assets/icons/quality.svg" alt="Premium Quality">
         </div>
         <h3 data-aos="fade-up" data-aos-delay="300">Premium Quality</h3>
@@ -79,9 +79,9 @@
 
       <div class="feature-card"
            data-aos="fade-up"
-           data-aos-duration="800"
-           data-aos-delay="200">
-        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+           data-aos-duration="500"
+           data-aos-delay="500">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="200" data-aos-delay="500">
           <img src="assets/icons/global-reach.svg" alt="Global Reach">
         </div>
         <h3 data-aos="fade-up" data-aos-delay="400">Global Reach</h3>
@@ -90,9 +90,9 @@
 
       <div class="feature-card"
            data-aos="fade-up"
-           data-aos-duration="800"
-           data-aos-delay="200">
-        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+           data-aos-duration="500"
+           data-aos-delay="500">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="200" data-aos-delay="500">
           <img src="assets/icons/support.svg" alt="24/7 Support">
         </div>
         <h3 data-aos="fade-up" data-aos-delay="500">24/7 Support</h3>
@@ -101,9 +101,9 @@
 
       <div class="feature-card"
            data-aos="fade-up"
-           data-aos-duration="800"
-           data-aos-delay="200">
-        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+           data-aos-duration="500"
+           data-aos-delay="500">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="200" data-aos-delay="500">
           <img src="assets/icons/innovation.svg" alt="Innovation">
         </div>
         <h3 data-aos="fade-up" data-aos-delay="600">Innovation First</h3>
@@ -111,9 +111,9 @@
       </div>
       <div class="feature-card"
             data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="200">
-        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            data-aos-duration="500"
+            data-aos-delay="500">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="200" data-aos-delay="500">
           <img src="assets/icons/eco-friendly.svg" alt="Eco-Friendly">
         </div>
         <h3 data-aos="fade-up" data-aos-delay="700">Eco-Friendly Design</h3>
@@ -122,9 +122,9 @@
 
       <div class="feature-card"
             data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="200">
-        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            data-aos-duration="500"
+            data-aos-delay="500">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="200" data-aos-delay="500">
           <img src="assets/icons/customization.svg" alt="Customization">
         </div>
         <h3 data-aos="fade-up" data-aos-delay="800">Custom Solutions</h3>
@@ -145,7 +145,8 @@
       <div class="product-card"
            *ngFor="let product of products"
            data-aos="fade-up"
-           data-aos-delay="200">
+           data-aos-duration="200" data-aos-delay="500"
+           data-aos-anchor-placement="center-bottom">
         <div class="product-image">
           <img [src]="product.image" [alt]="product.name">
           <div class="product-badge" *ngIf="product.badge">{{product.badge}}</div>
@@ -177,8 +178,9 @@
 
     <div class="testimonials-grid">
       <div class="testimonial-card" 
-           data-aos="fade-up" 
-           data-aos-delay="200">
+           data-aos="fade-up"
+           data-aos-duration="800" 
+           data-aos-anchor-placement="center-bottom">
         <div class="testimonial-content">
           <div class="quote-icon">
             <i class="fas fa-quote-left"></i>
@@ -262,7 +264,10 @@
     </div>
 
     <div class="stats-grid">
-      <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="stat-card" 
+           data-aos="fade-up"
+           data-aos-duration="500"
+           data-aos-anchor-placement="center-bottom">
         <div class="stat-icon">
           <i class="fas fa-industry"></i>
         </div>
@@ -270,7 +275,9 @@
         <div class="stat-label">Years Experience</div>
       </div>
 
-      <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="500" 
+      data-aos-duration="500"
+      data-aos-anchor-placement="center-bottom">
         <div class="stat-icon">
           <i class="fas fa-globe-asia"></i>
         </div>
@@ -278,7 +285,9 @@
         <div class="stat-label">Countries Served</div>
       </div>
 
-      <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="500" 
+      data-aos-duration="500"
+      data-aos-anchor-placement="center-bottom">
         <div class="stat-icon">
           <i class="fas fa-cogs"></i>
         </div>
@@ -286,7 +295,9 @@
         <div class="stat-label">Machines Installed</div>
       </div>
 
-      <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="500" 
+      data-aos-duration="500"
+      data-aos-anchor-placement="center-bottom">
         <div class="stat-icon">
           <i class="fas fa-users"></i>
         </div>
@@ -296,7 +307,10 @@
     </div>
 
     <div class="benefits-grid">
-      <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="benefit-card"
+           data-aos="fade-up"
+           data-aos-duration="800"
+           data-aos-anchor-placement="center-bottom">
         <div class="benefit-icon">
           <i class="fas fa-tachometer-alt"></i>
         </div>
@@ -309,7 +323,8 @@
         </ul>
       </div>
 
-      <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="benefit-card" data-aos="fade-up" data-aos-delay="500"
+      data-aos-anchor-placement="center-bottom">
         <div class="benefit-icon">
           <i class="fas fa-shield-alt"></i>
         </div>
@@ -322,7 +337,8 @@
         </ul>
       </div>
 
-      <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="benefit-card" data-aos="fade-up" data-aos-delay="500"
+      data-aos-anchor-placement="center-bottom">
         <div class="benefit-icon">
           <i class="fas fa-tools"></i>
         </div>
@@ -336,7 +352,8 @@
       </div>
     </div>
 
-    <div class="cta-container" data-aos="fade-up">
+    <div class="cta-container" data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom">
       <h3>Ready to Upgrade Your Juice Business?</h3>
       <p>Experience the Lion difference with our next-generation sugarcane machines</p>
       <div class="cta-buttons">

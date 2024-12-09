@@ -112,10 +112,14 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     AOS.refresh();
     AOS.init({
-      duration: 1000,
-      once: true,
-      mirror: false,
-      offset: 100
+      duration: 1000,          // Duration of animation
+      easing: 'ease-in-out',   // Easing for smoother animations
+      once: false,             // Whether animation should happen only once
+      mirror: true,            // Whether elements should animate out while scrolling past them
+      offset: 100,             // Offset (in px) from the original trigger point
+      delay: 0,                // Default delay
+      anchorPlacement: 'top-bottom', // Anchor placement
+      disable: 'mobile'        // Disable on mobile devices if needed
     });
     this.startSlideShow();
   }

@@ -1,27 +1,26 @@
 <header class="main-header">
-	<div class="header-container">
-		<div class="logo-container">
-			<a href="/" class="logo">
-				<img src="assets/lion_logo.png" alt="Logo" />
-				<!-- <span class="company-name">Lion</span> -->
-			</a>
-		</div>
+    <div class="header-container">
+        <div class="logo-container">
+            <a href="/" class="logo">
+                <img src="assets/lion_logo.png" alt="Logo" />
+            </a>
+        </div>
 
-		<nav class="nav-menu" [class.active]="isMenuOpen">
-			<ul class="nav-list">
-				<li><a href="#" class="nav-link">Home</a></li>
-				<li><a href="#" class="nav-link">About</a></li>
-				<li><a href="#" class="nav-link">Services</a></li>
-				<li><a href="#" class="nav-link">Contact</a></li>
-			</ul>
-		</nav>
+        <nav class="nav-menu" [class.active]="isMenuOpen" (click)="isMenuOpen ? toggleMenu() : null">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link active" (click)="toggleMenu()">Home</a></li>
+                <li><a href="#" class="nav-link" (click)="toggleMenu()">About</a></li>
+                <li><a href="#" class="nav-link" (click)="toggleMenu()">Services</a></li>
+                <li><a href="#" class="nav-link" (click)="toggleMenu()">Contact</a></li>
+            </ul>
+        </nav>
 
-		<button class="mobile-menu-btn" (click)="toggleMenu()">
-			<span class="hamburger-icon" [class.active]="isMenuOpen">
-				<span></span>
-				<span></span>
-				<span></span>
-			</span>
-		</button>
-	</div>
+        <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
+            <span class="hamburger-icon" [class.active]="isMenuOpen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </div>
 </header>

@@ -30,3 +30,26 @@ $secondary-color: #e5d34b;
 $mobile: 576px;
 $tablet: 768px;
 $desktop: 1024px;
+
+// AOS Animation Optimizations
+[data-aos] {
+	body.mobile & {
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
+		animation: none !important;
+	}
+	
+	@media screen and (prefers-reduced-motion: reduce) {
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
+		animation: none !important;
+	}
+}
+
+// Improve animation performance
+[data-aos] {
+	will-change: transform, opacity;
+	backface-visibility: hidden;
+	perspective: 1000;
+	transform: translateZ(0);
+}
