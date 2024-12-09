@@ -6,4 +6,28 @@ $color-primary-dark: darken($color-primary, 10%);
 // Color usage
 $color-text-primary: $color-primary;
 $color-button-primary: $color-primary;
-$color-border-primary: $color
+$color-border-primary: $color-primary;
+
+
+// Colors
+$primary-color: #178d34;  
+$surface-color: #ffffff;
+$text-color: #333333;
+$border-color: #e0e0e0;
+
+// Spacing
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+
+// Layout
+$container-width: 1200px;
+$border-radius: 4px;
+$border-radius-lg: 8px;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

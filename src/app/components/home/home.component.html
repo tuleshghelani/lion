@@ -1,11 +1,10 @@
-
-<section class="hero-slider" 
+<section class="hero-slider"
          (touchstart)="handleTouchStart($event)"
          (touchmove)="handleTouchMove($event)"
          (touchend)="handleTouchEnd()">
     <div class="slider-container">
-        <div class="slide" 
-             *ngFor="let slide of slides; let i = index" 
+        <div class="slide"
+             *ngFor="let slide of slides; let i = index"
              [class.active]="i === currentSlide"
              [attr.aria-hidden]="i !== currentSlide">
             <div class="slide-content" [style.backgroundImage]="'url(' + slide.image + ')'">
@@ -13,10 +12,10 @@
                     <div class="text-content" data-aos="fade-up" data-aos-delay="200">
                         <h1 class="slide-title" [attr.aria-label]="slide.title">{{slide.title}}</h1>
                         <p class="slide-description">{{slide.description}}</p>
-                        <a *ngIf="slide.ctaText" 
-                           [href]="slide.ctaLink" 
-                           class="cta-button neumorphic" 
-                           data-aos="fade-up" 
+                        <a *ngIf="slide.ctaText"
+                           [href]="slide.ctaLink"
+                           class="cta-button neumorphic"
+                           data-aos="fade-up"
                            data-aos-delay="400">
                             {{slide.ctaText}}
                         </a>
@@ -26,23 +25,23 @@
         </div>
 
         <div class="slider-controls">
-            <button class="control-btn prev neumorphic" 
-                    (click)="prevSlide()" 
+            <button class="control-btn prev neumorphic"
+                    (click)="prevSlide()"
                     data-aos="fade-right"
                     aria-label="Previous slide">
                 <i class="fas fa-chevron-left"></i>
             </button>
-            
+
             <div class="slider-navigation">
                 <div class="dots-container" data-aos="fade-up">
-                    <button class="dot" 
-                            *ngFor="let slide of slides; let i = index" 
+                    <button class="dot"
+                            *ngFor="let slide of slides; let i = index"
                             [class.active]="i === currentSlide"
                             (click)="goToSlide(i)"
                             [attr.aria-label]="'Go to slide ' + (i + 1)">
                     </button>
                 </div>
-                <button class="autoplay-toggle neumorphic" 
+                <button class="autoplay-toggle neumorphic"
                         (click)="toggleAutoplay()"
                         [class.active]="autoplayEnabled"
                         [attr.aria-label]="autoplayEnabled ? 'Pause slideshow' : 'Play slideshow'">
@@ -50,8 +49,8 @@
                 </button>
             </div>
 
-            <button class="control-btn next neumorphic" 
-                    (click)="nextSlide()" 
+            <button class="control-btn next neumorphic"
+                    (click)="nextSlide()"
                     data-aos="fade-left"
                     aria-label="Next slide">
                 <i class="fas fa-chevron-right"></i>
@@ -66,38 +65,105 @@
 
 <section class="features-section">
   <div class="container">
-      <div class="features-grid">
-          <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-wrapper">
-                <img src="assets/icons/quality.svg" alt="Premium Quality">
-            </div>
-            <h3>Premium Quality</h3>
-            <p>State-of-the-art sugarcane machines crafted with food-grade stainless steel, ensuring maximum hygiene and durability</p>
+    <div class="features-grid" data-aos-duration="1000">
+      <div class="feature-card"
+           data-aos="fade-up"
+           data-aos-duration="800"
+           data-aos-delay="200">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <img src="assets/icons/quality.svg" alt="Premium Quality">
         </div>
-        
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-wrapper">
-                <img src="assets/icons/global-reach.svg" alt="Global Reach">
-            </div>
-            <h3>Global Reach</h3>
-            <p>Serving businesses across 50+ countries with efficient shipping and local technical support network</p>
+        <h3 data-aos="fade-up" data-aos-delay="300">Premium Quality</h3>
+        <p data-aos="fade-up" data-aos-delay="400">State-of-the-art sugarcane machines crafted with food-grade stainless steel, ensuring maximum hygiene and durability</p>
+      </div>
+
+      <div class="feature-card"
+           data-aos="fade-up"
+           data-aos-duration="800"
+           data-aos-delay="200">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <img src="assets/icons/global-reach.svg" alt="Global Reach">
         </div>
-        
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-wrapper">
-                <img src="assets/icons/support.svg" alt="24/7 Support">
-            </div>
-            <h3>24/7 Support</h3>
-            <p>Round-the-clock technical assistance and maintenance support to keep your business running smoothly</p>
+        <h3 data-aos="fade-up" data-aos-delay="400">Global Reach</h3>
+        <p data-aos="fade-up" data-aos-delay="500">Serving businesses across 50+ countries with efficient shipping and local technical support network</p>
+      </div>
+
+      <div class="feature-card"
+           data-aos="fade-up"
+           data-aos-duration="800"
+           data-aos-delay="200">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <img src="assets/icons/support.svg" alt="24/7 Support">
         </div>
-        
-        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-wrapper">
-                <img src="assets/icons/innovation.svg" alt="Innovation">
-            </div>
-            <h3>Innovation First</h3>
-            <p>Advanced extraction technology delivering 100% juice yield with automated cleaning and safety features</p>
+        <h3 data-aos="fade-up" data-aos-delay="500">24/7 Support</h3>
+        <p data-aos="fade-up" data-aos-delay="600">Round-the-clock technical assistance and maintenance support to keep your business running smoothly</p>
+      </div>
+
+      <div class="feature-card"
+           data-aos="fade-up"
+           data-aos-duration="800"
+           data-aos-delay="200">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <img src="assets/icons/innovation.svg" alt="Innovation">
+        </div>
+        <h3 data-aos="fade-up" data-aos-delay="600">Innovation First</h3>
+        <p data-aos="fade-up" data-aos-delay="700">Advanced extraction technology delivering 100% juice yield with automated cleaning and safety features</p>
+      </div>
+      <div class="feature-card"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="200">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <img src="assets/icons/eco-friendly.svg" alt="Eco-Friendly">
+        </div>
+        <h3 data-aos="fade-up" data-aos-delay="700">Eco-Friendly Design</h3>
+        <p data-aos="fade-up" data-aos-delay="800">Energy-efficient operation with minimal waste production and recyclable components, supporting sustainable business practices</p>
+      </div>
+
+      <div class="feature-card"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="200">
+        <div class="icon-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <img src="assets/icons/customization.svg" alt="Customization">
+        </div>
+        <h3 data-aos="fade-up" data-aos-delay="800">Custom Solutions</h3>
+        <p data-aos="fade-up" data-aos-delay="900">Tailored machine configurations to match your business needs, from compact mobile units to high-capacity commercial installations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products-showcase">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Our Premium Machines</h2>
+      <p>Discover our range of professional sugarcane juice extractors</p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card"
+           *ngFor="let product of products"
+           data-aos="fade-up"
+           data-aos-delay="200">
+        <div class="product-image">
+          <img [src]="product.image" [alt]="product.name">
+          <div class="product-badge" *ngIf="product.badge">{{product.badge}}</div>
+        </div>
+        <div class="product-info">
+          <h3>{{product.name}}</h3>
+          <p class="product-description">{{product.description}}</p>
+          <ul class="product-features">
+            <li *ngFor="let feature of product.features">
+              <i class="fas fa-check"></i> {{feature}}
+            </li>
+          </ul>
+          <div class="product-actions">
+            <button class="btn-primary neumorphic">Learn More</button>
+            <button class="btn-secondary neumorphic">Request Quote</button>
+          </div>
         </div>
       </div>
+    </div>
   </div>
 </section>

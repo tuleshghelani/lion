@@ -9,6 +9,15 @@ interface Slide {
   ctaText?: string;
   ctaLink?: string;
 }
+
+interface Product {
+  image: string;
+  name: string;
+  description: string;
+  features: string[];
+  badge?: string;
+  delay: number;
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,6 +29,47 @@ export class HomeComponent implements OnInit {
   private autoplayInterval: any;
   private touchStartX = 0;
   private touchEndX = 0;
+
+  products: Product[] = [
+    {
+      image: 'assets/products/machine-1.jpg',
+      name: 'Sugarcane Juice Machine',
+      description: 'Commercial-grade sugarcane juicer with automated cleaning system',
+      badge: 'Best Seller',
+      features: [
+        'Stainless Steel Construction',
+        'Automated Cleaning System',
+        '200L/Hour Capacity',
+        'Digital Control Panel'
+      ],
+      delay: 100
+    },
+    {
+      image: 'assets/products/machine-2.jpg',
+      name: 'Commercial Sugarcane Juice Machine',
+      description: 'Perfect for small to medium businesses with space constraints',
+      features: [
+        'Space-Saving Design',
+        'Easy Maintenance',
+        '150L/Hour Capacity',
+        'Quiet Operation'
+      ],
+      delay: 200
+    },
+    {
+      image: 'assets/products/machine-3.jpg',
+      name: 'Rapid Sugarcane Juicer Machine',
+      description: 'High-capacity industrial juicer for large-scale operations',
+      badge: 'New',
+      features: [
+        'Heavy-duty Construction',
+        'Continuous Operation',
+        '300L/Hour Capacity',
+        'Advanced Safety Features'
+      ],
+      delay: 300
+    }
+  ];
 
   slides: Slide[] = [
     {
@@ -60,6 +110,7 @@ export class HomeComponent implements OnInit {
   ];
 
   ngOnInit() {
+    AOS.refresh();
     AOS.init({
       duration: 1000,
       once: true,
