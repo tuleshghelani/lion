@@ -1,0 +1,157 @@
+@import '../../../styles.scss';
+
+// Variables
+$primary-bg: #e0e5ec;
+$shadow-color-dark: #a3b1c6;
+$shadow-color-light: #ffffff;
+$text-color: #4a4a4a;
+$hover-color: var(--primary-color);
+
+.main-header {
+	background: $primary-bg;
+	padding: 1rem 0;
+	position: relative;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.header-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.neumorphic {
+	background: $primary-bg;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px $shadow-color-dark,
+							-5px -5px 10px $shadow-color-light;
+	transition: all 0.3s ease;
+
+	&:hover {
+		box-shadow: inset 5px 5px 10px $shadow-color-dark,
+								inset -5px -5px 10px $shadow-color-light;
+	}
+}
+
+.logo-container {
+	padding: 0.5rem 1rem;
+	@extend .neumorphic;
+	
+	.logo {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		
+		img {
+			height: 40px;
+			width: auto;
+		}
+		
+		.company-name {
+			font-size: 1.5rem;
+			font-weight: bold;
+			color: $text-color;
+		}
+	}
+}
+
+.nav-menu {
+	.nav-list {
+		display: flex;
+		gap: 1.5rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			.nav-link {
+				@extend .neumorphic;
+				text-decoration: none;
+				color: $text-color;
+				padding: 0.8rem 1.2rem;
+				display: inline-block;
+				font-weight: 500;
+				
+				&:hover {
+					color: $hover-color;
+				}
+			}
+		}
+	}
+}
+
+.mobile-menu-btn {
+	display: none;
+	border: none;
+	padding: 0.8rem;
+	cursor: pointer;
+	@extend .neumorphic;
+	
+	.hamburger-icon {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		
+		span {
+			display: block;
+			width: 25px;
+			height: 3px;
+			background: $text-color;
+			transition: 0.3s;
+		}
+		
+		&.active {
+			span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+			span:nth-child(2) { opacity: 0; }
+			span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+		}
+	}
+}
+
+// Tablet Responsive
+@media screen and (max-width: 768px) {
+	.nav-menu {
+		position: fixed;
+		top: 80px;
+		left: 0;
+		width: 100%;
+		background: $primary-bg;
+		padding: 1rem;
+		transform: translateY(-100%);
+		transition: transform 0.3s ease-in-out;
+		
+		&.active {
+			transform: translateY(0);
+		}
+
+		.nav-list {
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+		}
+	}
+
+	.mobile-menu-btn {
+		display: block;
+	}
+}
+
+// Mobile Responsive
+@media screen and (max-width: 480px) {
+	.header-container {
+		padding: 0 1rem;
+	}
+
+	.logo-container img {
+		height: 30px;
+	}
+
+	.nav-link {
+		padding: 0.6rem 1rem !important;
+	}
+}

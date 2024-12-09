@@ -1,0 +1,103 @@
+
+<section class="hero-slider" 
+         (touchstart)="handleTouchStart($event)"
+         (touchmove)="handleTouchMove($event)"
+         (touchend)="handleTouchEnd()">
+    <div class="slider-container">
+        <div class="slide" 
+             *ngFor="let slide of slides; let i = index" 
+             [class.active]="i === currentSlide"
+             [attr.aria-hidden]="i !== currentSlide">
+            <div class="slide-content" [style.backgroundImage]="'url(' + slide.image + ')'">
+                <div class="content-wrapper">
+                    <div class="text-content" data-aos="fade-up" data-aos-delay="200">
+                        <h1 class="slide-title" [attr.aria-label]="slide.title">{{slide.title}}</h1>
+                        <p class="slide-description">{{slide.description}}</p>
+                        <a *ngIf="slide.ctaText" 
+                           [href]="slide.ctaLink" 
+                           class="cta-button neumorphic" 
+                           data-aos="fade-up" 
+                           data-aos-delay="400">
+                            {{slide.ctaText}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <button class="control-btn prev neumorphic" 
+                    (click)="prevSlide()" 
+                    data-aos="fade-right"
+                    aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="slider-navigation">
+                <div class="dots-container" data-aos="fade-up">
+                    <button class="dot" 
+                            *ngFor="let slide of slides; let i = index" 
+                            [class.active]="i === currentSlide"
+                            (click)="goToSlide(i)"
+                            [attr.aria-label]="'Go to slide ' + (i + 1)">
+                    </button>
+                </div>
+                <button class="autoplay-toggle neumorphic" 
+                        (click)="toggleAutoplay()"
+                        [class.active]="autoplayEnabled"
+                        [attr.aria-label]="autoplayEnabled ? 'Pause slideshow' : 'Play slideshow'">
+                    <i class="fas" [class.fa-pause]="autoplayEnabled" [class.fa-play]="!autoplayEnabled"></i>
+                </button>
+            </div>
+
+            <button class="control-btn next neumorphic" 
+                    (click)="nextSlide()" 
+                    data-aos="fade-left"
+                    aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress" [style.width.%]="(currentSlide / (slides.length - 1)) * 100"></div>
+    </div>
+</section>
+
+<section class="features-section">
+  <div class="container">
+      <div class="features-grid">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-wrapper">
+                <img src="assets/icons/quality.svg" alt="Premium Quality">
+            </div>
+            <h3>Premium Quality</h3>
+            <p>State-of-the-art sugarcane machines crafted with food-grade stainless steel, ensuring maximum hygiene and durability</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-wrapper">
+                <img src="assets/icons/global-reach.svg" alt="Global Reach">
+            </div>
+            <h3>Global Reach</h3>
+            <p>Serving businesses across 50+ countries with efficient shipping and local technical support network</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-wrapper">
+                <img src="assets/icons/support.svg" alt="24/7 Support">
+            </div>
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock technical assistance and maintenance support to keep your business running smoothly</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-wrapper">
+                <img src="assets/icons/innovation.svg" alt="Innovation">
+            </div>
+            <h3>Innovation First</h3>
+            <p>Advanced extraction technology delivering 100% juice yield with automated cleaning and safety features</p>
+        </div>
+      </div>
+  </div>
+</section>

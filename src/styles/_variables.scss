@@ -1,0 +1,9 @@
+// Colors
+$color-primary: #178d34;
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
+
+// Color usage
+$color-text-primary: $color-primary;
+$color-button-primary: $color-primary;
+$color-border-primary: $color

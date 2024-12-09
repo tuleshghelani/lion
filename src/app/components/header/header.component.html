@@ -1,0 +1,27 @@
+<header class="main-header">
+	<div class="header-container">
+		<div class="logo-container">
+			<a href="/" class="logo">
+				<img src="assets/lion_logo.png" alt="Logo" />
+				<!-- <span class="company-name">Lion</span> -->
+			</a>
+		</div>
+
+		<nav class="nav-menu" [class.active]="isMenuOpen">
+			<ul class="nav-list">
+				<li><a href="#" class="nav-link">Home</a></li>
+				<li><a href="#" class="nav-link">About</a></li>
+				<li><a href="#" class="nav-link">Services</a></li>
+				<li><a href="#" class="nav-link">Contact</a></li>
+			</ul>
+		</nav>
+
+		<button class="mobile-menu-btn" (click)="toggleMenu()">
+			<span class="hamburger-icon" [class.active]="isMenuOpen">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</button>
+	</div>
+</header>

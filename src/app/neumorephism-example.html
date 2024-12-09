@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neumorphic-card {
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 2rem;
+      width: 300px;
+      box-shadow: 8px 8px 16px #151515,
+                  -8px -8px 16px #1f1f1f;
+      transition: all 0.3s ease;
+    }
+
+    .neumorphic-card:hover {
+      box-shadow: 12px 12px 20px #151515,
+                  -12px -12px 20px #1f1f1f;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .card-content {
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .card-button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      background: #1a1a1a;
+      color: #ffffff;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 5px 5px 10px #151515,
+                  -5px -5px 10px #1f1f1f;
+      transition: all 0.3s ease;
+    }
+
+    .card-button:hover {
+      box-shadow: inset 4px 4px 8px #151515,
+                  inset -4px -4px 8px #1f1f1f;
+    }
+</style>
+<body>
+  <div class="neumorphic-card">
+    <h2 class="card-title">Rutvik bhatt</h2>
+    <p class="card-content">MEAN Stack developer</p>
+    <button class="card-button">
+      Visit Profile
+    </button>
+  </div>
+</body>
+</html>
