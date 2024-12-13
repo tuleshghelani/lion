@@ -1,0 +1,91 @@
+<div class="products-page">
+  <section class="products-hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>Our Premium Products</h1>
+      <p>Discover our range of professional sugarcane juice extraction machines</p>
+    </div>
+  </section>
+
+  <section class="products-grid-section">
+    <div class="container">
+      <div class="products-grid">
+        <div class="product-card" 
+             *ngFor="let product of products" 
+             data-aos="fade-up"
+             data-aos-delay="100">
+          <div class="product-image">
+            <img [src]="product.image" [alt]="product.name">
+            <span class="badge" *ngIf="product.badge">{{product.badge}}</span>
+          </div>
+          <div class="product-info">
+            <h3>{{product.name}}</h3>
+            <p>{{product.description}}</p>
+            <div class="key-specs">
+              <div class="spec-item" *ngFor="let spec of product.specifications.slice(0, 4)">
+                <span class="spec-label">{{spec.key}} : </span>
+                <span class="spec-value"> {{spec.value}}</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-primary neumorphic" (click)="showProductDetails(product)">
+                View Details
+              </button>
+              <button class="btn-secondary neumorphic">
+                Request Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Details Modal -->
+  <div class="product-modal" *ngIf="selectedProduct" (click)="closeProductDetails()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeProductDetails()">&times;</button>
+      <div class="modal-body">
+        <div class="product-details">
+          <div class="product-image">
+            <img [src]="selectedProduct.image" [alt]="selectedProduct.name">
+          </div>
+          <div class="product-info">
+            <h2>{{selectedProduct.name}}</h2>
+            <p class="description">{{selectedProduct.description}}</p>
+            
+            <div class="specifications">
+              <h3>Technical Specifications</h3>
+              <div class="specs-grid">
+                <div class="spec-item" *ngFor="let spec of selectedProduct.specifications">
+                  <span class="spec-label">{{spec.key}} : </span>
+                  <span class="spec-value"> {{spec.value}}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="features">
+              <h3>Key Features</h3>
+              <ul>
+                <li *ngFor="let feature of selectedProduct.features">
+                  <i class="fas fa-check"></i>
+                  {{feature}}
+                </li>
+              </ul>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-primary neumorphic">
+                  <i class="fas fa-paper-plane"></i>
+                  Request Quote
+                </button>
+                <button class="btn-secondary neumorphic" (click)="downloadBrochure()">
+                    <i class="fas fa-download"></i>
+                    Download Brochure
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

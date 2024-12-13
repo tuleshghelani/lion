@@ -25,15 +25,46 @@ $color-primary: $primary-color;
 //   background-size: cover; /* Adjust this based on your design needs */
 //   background-position: center;
 // }
-.backgroundSugarcane {
+// .backgroundSugarcane {
   
-  display: block; /* Ensure the component fills the container */
+//   display: block; /* Ensure the component fills the container */
+//   width: 100%;
+//   // height: 100vh; /* Full viewport height */
+//   background-image: url('../../../assets/patterns/sugarcane-pattern.svg');
+//   background-repeat: no-repeat;
+//   background-size: cover; /* Adjust this based on your design needs */
+//   background-position: center;
+// }
+
+.backgroundSugarcane {
+  display: block;
   width: 100%;
-  // height: 100vh; /* Full viewport height */
-  background-image: url('../../../assets/patterns/sugarcane-pattern.svg');
-  background-repeat: no-repeat;
-  background-size: cover; /* Adjust this based on your design needs */
+  min-height: 100vh;
+  background-image: url('../../../assets/patterns/sugarcane.jpg');
+  background-repeat: repeat;
+  background-size: 400px auto;
   background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.85)
+    );
+    z-index: 1;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
 }
 .slider-container {
     height: 100%;

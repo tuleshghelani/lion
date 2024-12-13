@@ -50,7 +50,7 @@ $mobile-header-height: 70px;
 		text-decoration: none;
 		
 		img {
-			height: 40px;
+			height: 53px;
 			width: auto;
 		}
 		
@@ -78,14 +78,64 @@ $mobile-header-height: 70px;
 		li {
 			.nav-link {
 				@extend .neumorphic;
+				position: relative;
 				text-decoration: none;
 				color: $text-color;
 				padding: 0.8rem 1.2rem;
-				display: inline-block;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
 				font-weight: 500;
+				transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+				border-radius: 12px;
+				
+				.link-icon {
+					font-size: 1.1rem;
+					transition: transform 0.3s ease;
+				}
+
+				.link-text {
+					position: relative;
+					
+					&::after {
+						content: '';
+						position: absolute;
+						bottom: -4px;
+						left: 0;
+						width: 0;
+						height: 2px;
+						background: $primary-color;
+						transition: width 0.3s ease;
+					}
+				}
 				
 				&:hover {
-					color: $hover-color;
+					color: $primary-color;
+					transform: translateY(-2px);
+					
+					.link-icon {
+						transform: scale(1.1);
+					}
+					
+					.link-text::after {
+						width: 100%;
+					}
+				}
+				
+				&.active {
+					color: $primary-color;
+					background: lighten($primary-color, 55%);
+					font-weight: 600;
+					box-shadow: inset 3px 3px 5px $shadow-color-dark,
+							   inset -3px -3px 5px $shadow-color-light;
+					
+					.link-icon {
+						transform: scale(1.1);
+					}
+					
+					.link-text::after {
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -154,17 +204,16 @@ $mobile-header-height: 70px;
 				
 				.nav-link {
 					width: 100%;
-					text-align: center;
-					font-size: 1.1rem;
 					padding: 1rem 1.5rem;
-					border-radius: 12px;
-					transition: all 0.3s ease;
+					justify-content: center;
+					
+					.link-icon {
+						font-size: 1.2rem;
+					}
 					
 					&.active {
 						background: lighten($primary-color, 55%);
-						color: $primary-color;
-						box-shadow: inset 3px 3px 5px $shadow-color-dark,
-											 inset -3px -3px 5px $shadow-color-light;
+						transform: scale(1.05);
 					}
 				}
 			}

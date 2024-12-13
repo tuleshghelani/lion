@@ -124,6 +124,12 @@ export class HomeComponent implements OnInit {
     this.startSlideShow();
   }
 
+  
+  downloadBrochure() {
+    const pdfUrl = 'assets/PDF/sugarcane_juice_machine.pdf';
+    window.open(pdfUrl, '_blank');
+  }
+  
   ngOnDestroy() {
     if (this.autoplayInterval) {
       clearInterval(this.autoplayInterval);
