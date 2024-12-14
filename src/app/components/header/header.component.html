@@ -1,19 +1,18 @@
 <header class="main-header">
     <div class="header-container">
         <div class="logo-container">
-            <a href="/" class="logo">
-                <img src="assets/lion_logo.png" alt="Logo" />
+            <a routerLink="/" class="logo">
+                <img src="assets/lion_logo.png" alt="Lion Machine Logo" />
             </a>
         </div>
 
-        <nav class="nav-menu" [class.active]="isMenuOpen" (click)="isMenuOpen ? toggleMenu() : null">
+        <nav class="nav-menu" [class.active]="isMenuOpen">
             <ul class="nav-list">
                 <li>
                     <a routerLink="/" 
                        routerLinkActive="active" 
                        [routerLinkActiveOptions]="{exact: true}" 
-                       class="nav-link" 
-                       (click)="toggleMenu()">
+                       class="nav-link">
                         <span class="link-icon"><i class="fas fa-home"></i></span>
                         <span class="link-text">Home</span>
                     </a>
@@ -21,8 +20,7 @@
                 <li>
                     <a routerLink="/about" 
                        routerLinkActive="active" 
-                       class="nav-link" 
-                       (click)="toggleMenu()">
+                       class="nav-link">
                         <span class="link-icon"><i class="fas fa-info-circle"></i></span>
                         <span class="link-text">About</span>
                     </a>
@@ -30,8 +28,7 @@
                 <li>
                     <a routerLink="/products" 
                        routerLinkActive="active" 
-                       class="nav-link" 
-                       (click)="toggleMenu()">
+                       class="nav-link">
                         <span class="link-icon"><i class="fas fa-cogs"></i></span>
                         <span class="link-text">Products</span>
                     </a>
@@ -39,21 +36,34 @@
                 <li>
                     <a routerLink="/contact" 
                        routerLinkActive="active" 
-                       class="nav-link" 
-                       (click)="toggleMenu()">
+                       class="nav-link">
                         <span class="link-icon"><i class="fas fa-envelope"></i></span>
                         <span class="link-text">Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/dealership" 
+                       routerLinkActive="active" 
+                       class="nav-link">
+                        <span class="link-icon"><i class="fas fa-handshake"></i></span>
+                        <span class="link-text">Become a Dealer</span>
                     </a>
                 </li>
             </ul>
         </nav>
 
-        <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
-            <span class="hamburger-icon" [class.active]="isMenuOpen">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-        </button>
+        <div class="header-actions">
+            <a href="tel:+916353972799" class="contact-button">
+                <i class="fas fa-phone"></i>
+                <span>+91 6353972799</span>
+            </a>
+            <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
+                <span class="hamburger-icon" [class.active]="isMenuOpen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+        </div>
     </div>
 </header>

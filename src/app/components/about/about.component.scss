@@ -7,7 +7,7 @@
 .about-hero {
   height: 60vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('assets/about/slider_1.jpeg') center/cover;
+              url('/assets/about/slider_1.jpeg') center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,7 +105,7 @@
 }
 
 .our-values {
-  background: white;
+  // background: white;
 
   h2 {
     text-align: center;

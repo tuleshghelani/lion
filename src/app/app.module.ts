@@ -9,6 +9,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductService } from './services/product.service';
+import { DealershipComponent } from './components/dealership/dealership.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,14 @@ import { ProductService } from './services/product.service';
     HomeComponent,
     FooterComponent,
     AboutComponent,
-    ProductsComponent
+    ProductsComponent,
+    DealershipComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

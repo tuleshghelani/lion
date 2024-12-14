@@ -1,2 +1,2 @@
 "# lion" 
-ng deploy --base-href=/lion/
+ng deploy --base-href "https://tuleshghelani.github.io/lion/"
