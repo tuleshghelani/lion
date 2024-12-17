@@ -1,6 +1,7 @@
 node_modules
 .angular
-
+node_modules/*
+./node_modules/*
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output

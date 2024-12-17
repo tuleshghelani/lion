@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as AOS from 'aos';
 
 
@@ -29,6 +30,8 @@ export class HomeComponent implements OnInit {
   private autoplayInterval: any;
   private touchStartX = 0;
   private touchEndX = 0;
+  
+  constructor(private router: Router) {}
 
   products: Product[] = [
     {
@@ -142,6 +145,10 @@ export class HomeComponent implements OnInit {
         this.nextSlide();
       }, 5000);
     }
+  }
+
+  navigateToContact() {
+    this.router.navigate(['/contact']);
   }
 
   stopSlideShow() {
