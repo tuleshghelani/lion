@@ -1,0 +1,6 @@
+<div class="snackbar" [class.show]="show" [class.success]="type === 'success'" [class.error]="type === 'error'">
+  <div class="snackbar-content">
+    <i class="fas" [class.fa-check-circle]="type === 'success'" [class.fa-exclamation-circle]="type === 'error'"></i>
+    <span>{{ message }}</span>
+  </div>
+</div> 

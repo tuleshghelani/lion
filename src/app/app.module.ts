@@ -12,6 +12,8 @@ import { ProductService } from './services/product.service';
 import { DealershipComponent } from './components/dealership/dealership.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './components/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SnackbarComponent } from './components/shared/snackbar/snackbar.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +24,14 @@ import { ContactComponent } from './components/contact/contact.component';
     AboutComponent,
     ProductsComponent,
     DealershipComponent,
-    ContactComponent
+    ContactComponent,
+    SnackbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
