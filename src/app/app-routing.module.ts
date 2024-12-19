@@ -5,6 +5,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ProductsComponent } from './components/products/products.component';
 import { DealershipComponent } from './components/dealership/dealership.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { BlogListComponent } from './components/blog-list/blog-list.component';
+import { EssentialMaintenanceTipsComponent } from './components/blog_details/essential-maintenance-tips/essential-maintenance-tips.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'dealership', component: DealershipComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'blog-list', component: BlogListComponent },
+  { path: 'essential-maintenance-tips', component: EssentialMaintenanceTipsComponent },
 ];
 
 @NgModule({

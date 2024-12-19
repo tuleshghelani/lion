@@ -15,6 +15,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SnackbarComponent } from './components/shared/snackbar/snackbar.component';
 import { CountryService } from './services/country.service';
+import { BlogListComponent } from './components/blog-list/blog-list.component';
+import { EssentialMaintenanceTipsComponent } from './components/blog_details/essential-maintenance-tips/essential-maintenance-tips.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CountryService } from './services/country.service';
     ProductsComponent,
     DealershipComponent,
     ContactComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    BlogListComponent,
+    EssentialMaintenanceTipsComponent
   ],
   imports: [
     BrowserModule,

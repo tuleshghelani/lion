@@ -1,0 +1,50 @@
+<div class="backgroundSugarcane">
+  <div class="blog-container">
+    <!-- Hero Section -->
+    <section class="blog-hero" data-aos="fade-up">
+      <div class="hero-content">
+        <h1>Latest Updates & Insights</h1>
+        <p>Stay informed with our latest news, industry insights, and expert tips</p>
+      </div>
+    </section>
+
+    <!-- Blog Grid Section -->
+    <section class="blog-grid-section">
+      <div class="container">
+        <div class="blog-grid">
+          <!-- Blog Card -->
+          <div class="blog-card" *ngFor="let blog of blogs" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-image">
+              <img [src]="blog.image" [alt]="blog.title">
+              <span class="category-badge">{{blog.category}}</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="date"><i class="far fa-calendar"></i> {{blog.date}}</span>
+                <span class="read-time"><i class="far fa-clock"></i> {{blog.readTime}} min read</span>
+              </div>
+              <h3>{{blog.title}}</h3>
+              <p>{{blog.excerpt}}</p>
+              <div class="blog-footer">
+                <button class="read-more" (click)="readMore(blog)">
+                  Read More <i class="fas fa-arrow-right"></i>
+                </button>
+                <!-- <div class="social-share">
+                  <button (click)="shareBlog(blog, 'facebook')">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+                  <button (click)="shareBlog(blog, 'twitter')">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+                  <button (click)="shareBlog(blog, 'linkedin')">
+                    <i class="fab fa-linkedin-in"></i>
+                  </button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
