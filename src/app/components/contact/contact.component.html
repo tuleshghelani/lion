@@ -84,9 +84,25 @@
                     </div>
                   </div>
   
-                  <div class="form-group">
+                  <div class="form-group mobile-group">
                     <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" formControlName="phone" placeholder="Enter your phone number">
+                    <div class="mobile-input-group">
+                      <select 
+                        id="countryCode" 
+                        formControlName="countryCode" 
+                        (change)="onCountryChange($event)"
+                        class="country-code-select">
+                        <option *ngFor="let country of countries" [value]="country.dialCode">
+                          {{country.name}} ({{country.dialCode}})
+                        </option>
+                      </select>
+                      <input 
+                        type="number" 
+                        id="phone" 
+                        formControlName="phone" 
+                        placeholder="Enter your phone number"
+                        class="mobile-input">
+                    </div>
                     <div class="error-message" *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid">
                       Please enter a valid phone number
                     </div>
@@ -109,9 +125,11 @@
                   </div>
                 </div>
   
-                <button type="submit" class="btn-primary neumorphic" [disabled]="!contactForm.valid">
-                  Send Message
-                </button>
+                <div class="form-actions">
+                  <button type="submit" class="btn-primary neumorphic" [disabled]="!contactForm.valid">
+                    Send Message
+                  </button>
+                </div>
               </form>
             </div>
           </div>

@@ -338,3 +338,58 @@
     align-items: flex-start;
   }
 }
+
+.mobile-group {
+  .mobile-input-group {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+
+    .country-code-select {
+      width: 40%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f8f8f8;
+      color: #333;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 2px rgba($primary-color, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        width: 45%;
+      }
+
+      @media (max-width: 480px) {
+        width: 50%;
+      }
+    }
+
+    .mobile-input {
+      width: 60%;
+      
+      @media (max-width: 768px) {
+        width: 55%;
+      }
+
+      @media (max-width: 480px) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+// Add styles for the select dropdown
+select option {
+  padding: 10px;
+  font-size: 0.9rem;
+  
+  &:hover {
+    background-color: rgba($primary-color, 0.1);
+  }
+}

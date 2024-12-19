@@ -75,11 +75,27 @@
                 </div>
               </div>
   
-              <div class="form-group">
+              <div class="form-group mobile-group">
                 <label for="mobile">Mobile Number *</label>
-                <input type="tel" id="mobile" formControlName="mobile" placeholder="Enter your mobile number">
+                <div class="mobile-input-group">
+                  <select 
+                    id="countryCode" 
+                    formControlName="countryCode" 
+                    (change)="onCountryChange($event)"
+                    class="country-code-select">
+                    <option *ngFor="let country of countries" [value]="country.dialCode">
+                      {{country.name}} ({{country.dialCode}})
+                    </option>
+                  </select>
+                  <input 
+                    type="number" 
+                    id="mobile" 
+                    formControlName="mobile" 
+                    placeholder="Enter your mobile number"
+                    class="mobile-input">
+                </div>
                 <div class="error-message" *ngIf="dealershipForm.get('mobile')?.touched && dealershipForm.get('mobile')?.invalid">
-                  Please enter a valid 10-digit mobile number
+                  Please enter a valid mobile number
                 </div>
               </div>
   

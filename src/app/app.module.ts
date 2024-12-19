@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './components/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SnackbarComponent } from './components/shared/snackbar/snackbar.component';
+import { CountryService } from './services/country.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { SnackbarComponent } from './components/shared/snackbar/snackbar.compone
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, CountryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
