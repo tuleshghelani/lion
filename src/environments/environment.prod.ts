@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseURL: 'https://neomat-backend.vercel.app'
+  baseURL: 'https://common-backend-six.vercel.app'
 };
