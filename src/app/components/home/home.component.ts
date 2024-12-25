@@ -5,8 +5,8 @@ import * as AOS from 'aos';
 
 interface Slide {
   image: string;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   ctaText?: string;
   ctaLink?: string;
 }
@@ -76,25 +76,25 @@ export class HomeComponent implements OnInit {
 
   slides: Slide[] = [
     {
-      image: 'assets/slider/1.jpeg',
-      title: 'Innovation Redefined',
-      description: 'Leading the way in technological advancement',
-      ctaText: 'Explore Innovation',
-      ctaLink: '/innovation'
+      image: 'assets/slider/website_post_1.jpg',
+      // title: 'Innovation Redefined',
+      // description: 'Leading the way in technological advancement',
+      // ctaText: 'Explore Innovation',
+      // ctaLink: '/innovation'
     },
     {
-      image: 'assets/slider/2.jpeg',
-      title: 'Future Forward',
-      description: 'Building tomorrow\'s solutions today',
-      ctaText: 'View Solutions',
-      ctaLink: '/solutions'
+      image: 'assets/slider/website_post_1.jpg'
+      // title: 'Future Forward',
+      // description: 'Building tomorrow\'s solutions today',
+      // ctaText: 'View Solutions',
+      // ctaLink: '/solutions'
     },
     {
-      image: 'assets/slider/3.jpeg',
-      title: 'Excellence Delivered',
-      description: 'Committed to exceptional quality',
-      ctaText: 'Our Services',
-      ctaLink: '/services'
+      image: 'assets/slider/website_post_1.jpg',
+      // title: 'Excellence Delivered',
+      // description: 'Committed to exceptional quality',
+      // ctaText: 'Our Services',
+      // ctaLink: '/services'
     },
     {
       image: 'assets/slider/4.jpeg',

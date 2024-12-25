@@ -8,7 +8,7 @@
              *ngFor="let slide of slides; let i = index"
              [class.active]="i === currentSlide"
              [attr.aria-hidden]="i !== currentSlide">
-            <div class="slide-content" [style.backgroundImage]="'url(' + slide.image + ')'">
+            <div class="slide-content" [style.backgroundImage]="'url(' + slide.image + ')'" loading="lazy">
                 <div class="content-wrapper">
                     <div class="text-content" data-aos="fade-up" data-aos-delay="800">
                         <h1 class="slide-title" [attr.aria-label]="slide.title">{{slide.title}}</h1>
