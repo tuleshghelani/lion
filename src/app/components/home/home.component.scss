@@ -92,10 +92,18 @@ $color-primary: $primary-color;
 
 .slide-content {
     position: relative;
+    padding-top: 80px;
     height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @media (max-width: 768px) {
+      padding-top: 0px;
+      background-size: contain !important;
+      // object-fit: contain !important;
+      // height: auto;
+      // max-height: 300px;
+    }
 
     &::before {
         content: '';

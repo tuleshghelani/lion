@@ -76,39 +76,18 @@ export class HomeComponent implements OnInit {
 
   slides: Slide[] = [
     {
-      image: 'assets/slider/website_post_1.jpg',
+      image: 'assets/slider/website_post.jpg',
       // title: 'Innovation Redefined',
       // description: 'Leading the way in technological advancement',
       // ctaText: 'Explore Innovation',
       // ctaLink: '/innovation'
     },
     {
-      image: 'assets/slider/website_post_1.jpg'
+      image: 'assets/slider/website_post_2.jpg'
       // title: 'Future Forward',
       // description: 'Building tomorrow\'s solutions today',
       // ctaText: 'View Solutions',
       // ctaLink: '/solutions'
-    },
-    {
-      image: 'assets/slider/website_post_1.jpg',
-      // title: 'Excellence Delivered',
-      // description: 'Committed to exceptional quality',
-      // ctaText: 'Our Services',
-      // ctaLink: '/services'
-    },
-    {
-      image: 'assets/slider/4.jpeg',
-      title: 'Smart Solutions',
-      description: 'Innovative approaches to modern challenges',
-      ctaText: 'Learn More',
-      ctaLink: '/about'
-    },
-    {
-      image: 'assets/slider/5.jpeg',
-      title: 'Global Impact',
-      description: 'Making a difference worldwide',
-      ctaText: 'Our Impact',
-      ctaLink: '/impact'
     }
   ];
 
