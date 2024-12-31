@@ -88,6 +88,13 @@ export class HomeComponent implements OnInit {
       // description: 'Building tomorrow\'s solutions today',
       // ctaText: 'View Solutions',
       // ctaLink: '/solutions'
+    },
+    {
+      image: 'assets/slider/website_post_3.jpg'
+      // title: 'Future Forward',
+      // description: 'Building tomorrow\'s solutions today',
+      // ctaText: 'View Solutions',
+      // ctaLink: '/solutions'
     }
   ];
 
