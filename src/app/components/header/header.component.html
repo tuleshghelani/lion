@@ -12,7 +12,7 @@
                     <a routerLink="/" 
                        routerLinkActive="active" 
                        [routerLinkActiveOptions]="{exact: true}" 
-                       class="nav-link">
+                       class="nav-link" (click)="isMenuOpen = false">
                         <span class="link-icon"><i class="fas fa-home"></i></span>
                         <span class="link-text">Home</span>
                     </a>
@@ -20,7 +20,7 @@
                 <li>
                     <a routerLink="/about" 
                        routerLinkActive="active" 
-                       class="nav-link">
+                       class="nav-link" (click)="isMenuOpen = false">
                         <span class="link-icon"><i class="fas fa-info-circle"></i></span>
                         <span class="link-text">About</span>
                     </a>
@@ -28,7 +28,7 @@
                 <li>
                     <a routerLink="/products" 
                        routerLinkActive="active" 
-                       class="nav-link">
+                       class="nav-link" (click)="isMenuOpen = false">
                         <span class="link-icon"><i class="fas fa-cogs"></i></span>
                         <span class="link-text">Products</span>
                     </a>
@@ -36,7 +36,7 @@
                 <li>
                     <a routerLink="/contact" 
                        routerLinkActive="active" 
-                       class="nav-link">
+                       class="nav-link" (click)="isMenuOpen = false">
                         <span class="link-icon"><i class="fas fa-envelope"></i></span>
                         <span class="link-text">Contact</span>
                     </a>
@@ -44,7 +44,7 @@
                 <li>
                     <a routerLink="/dealership" 
                        routerLinkActive="active" 
-                       class="nav-link">
+                       class="nav-link" (click)="isMenuOpen = false">
                         <span class="link-icon"><i class="fas fa-handshake"></i></span>
                         <span class="link-text">Become a Dealer</span>
                     </a>
@@ -52,7 +52,7 @@
                 <li>
                     <a routerLink="/blog-list" 
                        routerLinkActive="active" 
-                       class="nav-link">
+                       class="nav-link" (click)="isMenuOpen = false">
                         <span class="link-icon"><i class="fas fa-blog"></i></span>
                         <span class="link-text">Blog</span>
                     </a>
