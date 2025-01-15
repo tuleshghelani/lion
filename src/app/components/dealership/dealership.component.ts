@@ -37,7 +37,7 @@ export class DealershipComponent {
       storageFacilities: ['', Validators.required],
       showroomFacilities: ['', Validators.required],
       transportFacilities: ['', Validators.required],
-      message: ['', Validators.required]
+      message: ['']
     });
   }
 
@@ -57,6 +57,7 @@ export class DealershipComponent {
         .subscribe({
           next: (response) => {
             this.snackbarService.showSuccess('Dealership application submitted successfully!');
+            this.dealershipForm.reset();
           },
           error: (error) => {
             this.snackbarService.showError('Failed to submit application. Please try again.');
