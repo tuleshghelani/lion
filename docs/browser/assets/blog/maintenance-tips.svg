@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Main Machine Outline -->
+  <rect x="200" y="150" width="400" height="300" fill="#ffffff" stroke="#178d34" stroke-width="3" rx="15"/>
+  
+  <!-- Maintenance Elements -->
+  <!-- Rollers -->
+  <circle cx="400" cy="250" r="40" fill="#f1f1f1" stroke="#178d34" stroke-width="2"/>
+  <circle cx="400" cy="250" r="30" fill="#178d34"/>
+  
+  <!-- Tools -->
+  <g transform="translate(300, 350)">
+    <rect width="40" height="40" fill="#178d34" rx="5"/>
+    <path d="M 10 20 L 30 20 M 20 10 L 20 30" stroke="white" stroke-width="3"/>
+  </g>
+  
+  <!-- Cleaning Symbol -->
+  <g transform="translate(460, 350)">
+    <circle cx="0" cy="0" r="20" fill="#178d34"/>
+    <path d="M -10 0 L 10 0 M 0 -10 L 0 10" stroke="white" stroke-width="3"/>
+  </g>
+  
+  <!-- Safety Icons -->
+  <g transform="translate(150, 200)">
+    <polygon points="0,0 20,-30 40,0" fill="#856404"/>
+    <text x="20" y="-10" fill="white" font-size="20" text-anchor="middle">!</text>
+  </g>
+  
+  <!-- Maintenance Schedule -->
+  <g transform="translate(600, 200)">
+    <rect width="100" height="120" fill="white" stroke="#178d34" stroke-width="2"/>
+    <line x1="10" y1="30" x2="90" y2="30" stroke="#178d34" stroke-width="2"/>
+    <line x1="10" y1="60" x2="90" y2="60" stroke="#178d34" stroke-width="2"/>
+    <line x1="10" y1="90" x2="90" y2="90" stroke="#178d34" stroke-width="2"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="500" fill="#178d34" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">
+    Essential Maintenance Guide
+  </text>
+</svg> 

@@ -1,0 +1,59 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Machine Base -->
+  <rect x="150" y="300" width="500" height="200" fill="#e9ecef" stroke="#495057" stroke-width="2"/>
+  
+  <!-- Rollers -->
+  <g id="rollers">
+    <!-- Roller 1 -->
+    <circle cx="300" cy="400" r="60" fill="#28a745" stroke="#495057" stroke-width="2"/>
+    <text x="300" y="400" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Primary Roller</text>
+    
+    <!-- Roller 2 -->
+    <circle cx="500" cy="400" r="60" fill="#28a745" stroke="#495057" stroke-width="2"/>
+    <text x="500" y="400" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Secondary Roller</text>
+    
+    <!-- Pressure Indicators -->
+    <path d="M300,320 L300,340" stroke="#dc3545" stroke-width="2"/>
+    <path d="M500,320 L500,340" stroke="#dc3545" stroke-width="2"/>
+    <text x="300" y="310" text-anchor="middle" fill="#495057" font-family="Arial" font-size="12">Pressure: 2.5 MPa</text>
+    <text x="500" y="310" text-anchor="middle" fill="#495057" font-family="Arial" font-size="12">Pressure: 2.0 MPa</text>
+  </g>
+  
+  <!-- Feed System -->
+  <path d="M200,200 L300,340" fill="none" stroke="#495057" stroke-width="2" stroke-dasharray="4"/>
+  <text x="220" y="230" fill="#495057" font-family="Arial" font-size="14">Feed Rate: 60kg/h</text>
+  
+  <!-- Juice Collection -->
+  <path d="M400,460 L400,500" fill="none" stroke="#007bff" stroke-width="4"/>
+  <text x="420" y="480" fill="#495057" font-family="Arial" font-size="14">Juice Collection</text>
+  
+  <!-- Optimization Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffc107"/>
+    </marker>
+  </defs>
+  <path d="M300,200 Q400,150 500,200" fill="none" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="400" y="150" text-anchor="middle" fill="#495057" font-family="Arial" font-size="16">Optimization Flow</text>
+  
+  <!-- Technical Measurements -->
+  <g id="measurements" stroke="#6c757d" stroke-width="1">
+    <line x1="150" y1="550" x2="650" y2="550"/>
+    <text x="400" y="570" text-anchor="middle" fill="#495057" font-family="Arial" font-size="12">Machine Width: 500mm</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(650, 50)">
+    <rect width="120" height="100" fill="white" stroke="#dee2e6"/>
+    <text x="10" y="20" fill="#495057" font-family="Arial" font-size="12">Legend:</text>
+    <circle cx="20" cy="40" r="6" fill="#28a745"/>
+    <text x="35" y="45" fill="#495057" font-family="Arial" font-size="12">Rollers</text>
+    <line x1="15" y1="60" x2="25" y2="60" stroke="#dc3545" stroke-width="2"/>
+    <text x="35" y="65" fill="#495057" font-family="Arial" font-size="12">Pressure</text>
+    <line x1="15" y1="80" x2="25" y2="80" stroke="#007bff" stroke-width="2"/>
+    <text x="35" y="85" fill="#495057" font-family="Arial" font-size="12">Flow</text>
+  </g>
+</svg>

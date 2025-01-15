@@ -17,6 +17,11 @@ import { SnackbarComponent } from './components/shared/snackbar/snackbar.compone
 import { CountryService } from './services/country.service';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { EssentialMaintenanceTipsComponent } from './components/blog_details/essential-maintenance-tips/essential-maintenance-tips.component';
+import { BusinessStartupComponent } from './components/blog_details/business-startup/business-startup.component';
+import { MarketTrendsComponent } from './components/blog_details/market-trends/market-trends.component';
+import { EcoFriendlyExtractorsComponent } from './components/blog_details/eco-friendly-extractors/eco-friendly-extractors.component';
+import { SafetyGuidelinesComponent } from './components/blog_details/safety-guidelines/safety-guidelines.component';
+import { MaximizingJuiceYieldComponent } from './components/blog_details/maximizing-juice-yield/maximizing-juice-yield.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,12 @@ import { EssentialMaintenanceTipsComponent } from './components/blog_details/ess
     ContactComponent,
     SnackbarComponent,
     BlogListComponent,
-    EssentialMaintenanceTipsComponent
+    EssentialMaintenanceTipsComponent,
+    BusinessStartupComponent,
+    MarketTrendsComponent,
+    EcoFriendlyExtractorsComponent,
+    SafetyGuidelinesComponent,
+    MaximizingJuiceYieldComponent
   ],
   imports: [
     BrowserModule,
